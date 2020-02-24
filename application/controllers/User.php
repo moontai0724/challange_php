@@ -37,14 +37,14 @@ class User extends CI_Controller
 		}
 	}
 
-	public function getMyImage()
+	public function getProfileImage()
 	{
 		$account = $_POST["account"];
 		$password = $_POST["password"];
 
 		if (isset($account) && isset($password) && $this->User_model->login($account, $password)) {
-			$user = $this->User_model->get_image($account, $password);
-			$this->load->view('User/showImage', array("user" => $user));
+			$user = $this->User_model->getProfileImage($account, $password);
+			$this->load->view('user/getProfileImage', array("user" => $user));
 		} else {
 			redirect('User/index');
 		}
