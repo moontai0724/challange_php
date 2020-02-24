@@ -43,8 +43,8 @@ class User extends CI_Controller
 		$password = $_POST["password"];
 
 		if (isset($account) && isset($password) && $this->User_model->login($account, $password)) {
-			$image = $this->User_model->get_image($account, $password);
-			$this->load->view('User/showImage', $image);
+			$user = $this->User_model->get_image($account, $password);
+			$this->load->view('User/showImage', array("user" => $user));
 		} else {
 			redirect('User/index');
 		}
