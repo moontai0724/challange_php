@@ -16,11 +16,11 @@
 		<tbody>
 			<?php
 			for ($i = 0; $i < count($succeed_users); $i++) {
-				$result = '<tr>';
+				$result = '<tr style="background-color: ' . ($succeed_users[$i]["pwnedPassword"] ? "cornflowerblue; color: white" : "aliceblue") . ';">';
 				$result = $result . '<td data-label="id">' . $succeed_users[$i]["id"] . '</td>';
 				$result = $result . '<td data-label="name">' . $succeed_users[$i]["name"] . '</td>';
 				$result = $result . '<td data-label="time">' . $succeed_users[$i]["time"] . '</td>';
-				$result = $result . '<td data-label="time">' . $succeed_users[$i]["pwnedPassword"] . '</td>';
+				$result = $result . '<td data-label="time">' . ($succeed_users[$i]["pwnedPassword"] ? "是" : "否") . '</td>';
 				$result = $result . '</tr>';
 				echo $result;
 			}
