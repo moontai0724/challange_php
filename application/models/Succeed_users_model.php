@@ -12,9 +12,9 @@ class Succeed_users_model extends CI_Model
 	{
 	}
 
-	public function log($name)
+	public function log($name, $pwnedPassword)
 	{
-		$response = array("name" => $name);
+		$response = array("name" => $name, "pwnedPassword" => $pwnedPassword);
 		$this->db->insert("succeed_users", $response);
 
 		if ($this->db->affected_rows() > 0) {

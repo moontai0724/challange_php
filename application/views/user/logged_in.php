@@ -10,7 +10,7 @@
 			<input type="text" name="name" placeholder="王曉明">
 		</div>
 		<div class="field">
-			<label>請輸入管理員密碼：</label>
+			<label>請輸入管理員密碼：（不知道可以嘗試獲取看看，但也可以直接送交，在結果會顯示是否有找出密碼）</label>
 			<input type="password" name="password" placeholder="Password">
 		</div>
 		<button class="ui positive button" type="submit">送出</button>
